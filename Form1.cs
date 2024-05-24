@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System;
 using System.Windows.Forms;
 
 namespace real_cool_game
@@ -16,9 +9,20 @@ namespace real_cool_game
 
         public Form1()
         {
+
             InitializeComponent();
+            menuBar.Maximum = 3;
+           
+            if (menuBar.Value == 2)
+            {
+                winMenu.Show();
+            }
+            else
+            {
+                winMenu.Hide();
+            }
             
-    }
+        }
 
         private void start_Click(object sender, EventArgs e)
         {
@@ -32,12 +36,21 @@ namespace real_cool_game
 
         private void progressBar1_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+           
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
 
         }
+
+       
     }
 }
+
+

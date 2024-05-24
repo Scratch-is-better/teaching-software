@@ -10,13 +10,9 @@ namespace real_cool_game
     public partial class Form2 : Form
     {
 
-
-
-
-
         Label[] labels = new Label[3]; //making array
-        Form1 form1 = null;
-        bool won = false;
+        Form1 form1 = null; //for linking the forms
+        bool won = false; 
 
         public Form2()
         {
@@ -38,9 +34,9 @@ namespace real_cool_game
 
         private void codeBlock_MouseDown(object sender, MouseEventArgs e) //universal code for drag and dropping labels
         {
-            Label codeBlock = sender as Label;
-            DataObject dragLabel = new DataObject();
-            dragLabel.SetData(DataFormats.Text, true, codeBlock.Text);
+            Label codeBlock = sender as Label; //whatever label was picked will be the sender
+            DataObject dragLabel = new DataObject(); //putting the label's data in to a new data object
+            dragLabel.SetData(DataFormats.Text, true, codeBlock.Text); 
             DoDragDrop(dragLabel, DragDropEffects.Copy);
 
         }
@@ -120,11 +116,6 @@ namespace real_cool_game
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-
-
-
-
-
 
             if (answerBox.Text == "17440" && qstn.Text == "Question 1, loops: How many times will this 'for loop' run?\n for(int i = 0; i < 17440; i++)")
             {
